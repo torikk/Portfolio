@@ -14,13 +14,44 @@
 <body>
 
 
+<div class="container">
+   <div class="flex-container">
+       <div class="box1"></div>
+        <div>
+            <div class="button" id="leftBtn" onclick="slidetoggleL()">WORK</div>
+        </div>
+        <div class="textPosition">
+            <div class="header">
+                <h1> Hallo,<br />I'm Tori Finch.</h1>
+               <p><mark>I'm a content manager and front-end developer based in Munich, Germany.</mark></p>
+            </div>
+            <div class="rotator">
+                <p class="blurb">"Tori works with multiple GEOs and always completes projects on time which shows her superb organizational skills and attention to detail. Not only is she a top performer in her work, she is also an extremely personable co-worker and great team player which helps her succeed in our team environment. Tori would be an amazing addition and great developer for any company."</p>
+                <p class="author">Megan Abel, Account Manager, Motivation Technologies</p>
+            </div>    
+                    
+            
+        </div>
+       
+        <div>
+            <div class="button" id="rigthBtn" onclick="slidetoggleR()">CONTACT</div>
+        </div>
+         <div class="box2"></div>
+    </div>
+        
+</div>
 
 
-
-
-
-
-
+<script>
+    
+$(document).ready(function(){
+  $(".slide-toggle").click(function(){
+    $(".box1").animate({
+      width: "toggle"
+    });
+  });
+});
+    </script>
 <script src="script.js" type="text/javascript"></script>
  </body>
     
