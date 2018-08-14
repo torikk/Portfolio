@@ -4,7 +4,7 @@
    <meta charset = "UTF-8">
      <title>Tori Finch Portfolio</title>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-         
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>     
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
      
@@ -15,38 +15,52 @@
 
 
 <div class="container">
-   <div class="flex-container">
-       <div class="box1"></div>
-        <div>
-            <div class="button" id="leftBtn" onclick="slidetoggleL()">WORK</div>
-        </div>
-        <div class="textPosition">
-            <div class="header">
-                <h1> Hallo,<br />I'm Tori Finch.</h1>
-               <p><mark>I'm a content manager and front-end developer based in Munich, Germany.</mark></p>
-            </div>
-            <div class="rotator">
-                <p class="blurb">"Tori works with multiple GEOs and always completes projects on time which shows her superb organizational skills and attention to detail. Not only is she a top performer in her work, she is also an extremely personable co-worker and great team player which helps her succeed in our team environment. Tori would be an amazing addition and great developer for any company."</p>
-                <p class="author">Megan Abel, Account Manager, Motivation Technologies</p>
-            </div>    
-                    
-            
-        </div>
-       
-        <div>
-            <div class="button" id="rigthBtn" onclick="slidetoggleR()">CONTACT</div>
-        </div>
-         <div class="box2"></div>
+  
+  
+      <div class="box1"><div class="box-inner">Lorum Ipsum</div></div>
+  
+  
+<div class="flex-container">
+
+    <div>
+        <button type="button" class="slide-toggleL leftBtn">WORK</div>
     </div>
+    
+    <div class="textPosition">
+        <div class="header">
+            <h1> Hallo!<br />I'm Tori Finch.</h1>
+            <p><mark>I'm a content manager and front-end developer based in Munich, Germany.</mark></p>
+        </div>
+        <div class="rotator">
+            <p class="blurb">"Tori works with multiple GEOs and always completes projects on time which shows her superb organizational skills and attention to detail. Not only is she a top performer in her work, she is also an extremely personable co-worker and great team player which helps her succeed in our team environment. Tori would be an amazing addition and great developer for any company."</p>
+            <p class="author">Megan Abel, Account Manager, Motivation Technologies</p>
+        </div>
+    </div>
+    
+    <div>
+        <button type="button" class="slide-toggleL rigthBtn">CONTACT</div>
+    </div>
+
+</div>
         
+      <div class="box2"><div class="box-inner">Lorum Ipsum</div></div>
 </div>
 
 
 <script>
     
 $(document).ready(function(){
-  $(".slide-toggle").click(function(){
+  $(".slide-toggleL").click(function(){
     $(".box1").animate({
+      width: "toggle"
+    });
+  });
+});
+</script> 
+<script>       
+$(document).ready(function(){
+  $(".slide-toggleR").click(function(){
+    $(".box2").animate({
       width: "toggle"
     });
   });

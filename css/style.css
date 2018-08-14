@@ -18,8 +18,7 @@ body, html {
     align-items: stretch;
 }
 
-.button {
-    width: 70px;
+button {
     background-color: #000;
     font-family:Arial;
     color: #ffcc00;
@@ -28,17 +27,16 @@ body, html {
     top: 50%;    
 }
 
-#leftBtn {
+button > .leftBtn {
     left: 0;
 }
 
-#rigthBtn {
-    right:0;
+button > .rigthBtn {
+    right: 0;
 }
 
 .textPosition {
     position:relative;
-    border: 3px solid #73AD21;
     flex-grow: 8;
     width:100%;
     height:100%;
@@ -51,7 +49,7 @@ body, html {
     opacity: .8;
     position:absolute;
     top:100px;
-    left:350px;
+    right:40%;
     box-sizing: border-box;
     padding: 20px 40px;
 }
@@ -82,7 +80,7 @@ body, html {
     opacity: .85;
     position: absolute;
     top: 402px;
-    left: 447px;
+    right: 20%;
     box-sizing: border-box;
     padding: 20px 40px;
 }
@@ -109,20 +107,20 @@ mark {
 .box1{
     float:left;
     overflow: hidden;
-    background: #f0e68c;
-    display:none;
+    background-color: rgba(13, 13, 13, 0.9);
+    height:100%;
     }
 
 .box2 {
-    float:left;
+    float:right;
     overflow: hidden;
-    background: #f0e68c;
-    display:none;
+    background-color: rgba(13, 13, 13, 0.9);
+    height:100%;
     }
     /* Add padding and border to inner content
     for better animation effect */
     .box-inner{
-        width: 400px;
+        width: 1200px;
         padding: 10px;
         border: 1px solid #a29415;
     }
