@@ -1,6 +1,15 @@
 
 body, html {
     height: 100%;
+    border: 1px solid red;
+}
+
+
+// This applies from 600px onwards
+@media only screen and (min-width: 600px) {
+  body {
+    border: 1px solid green;
+  }
 }
 
 .container {
@@ -27,11 +36,11 @@ button {
     top: 50%;    
 }
 
-button > .leftBtn {
+.slide-toggleL {
     left: 0;
 }
 
-button > .rigthBtn {
+.slide-toggleR {
     right: 0;
 }
 
@@ -109,6 +118,9 @@ mark {
     overflow: hidden;
     background-color: rgba(13, 13, 13, 0.9);
     height:100%;
+    position:relative;
+    left: 0;
+    top: 0;
     }
 
 .box2 {
