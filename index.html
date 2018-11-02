@@ -2,6 +2,7 @@
 <html>
 <head>
    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Tori Finch Portfolio</title>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>     
@@ -17,13 +18,68 @@
 <div class="container">
   
   
+   <div class="flex-container">
+   <div class="boxRight"><div class="box-inner">
+      
+         
+         
+          <div class="bio">
+             <h2>Hi, I'm Tori.</h2>
+              <p>I currently work as a Content Manager where I update Intel's Retail Edge Program's international sites using a custom CMS, HTML, CSS, and Javascript.<br /><br />
+              
+              I'm looking for a position where I can build dynamic javascript and eyecatching applications. <br /><br />
+              
+              I recently completed an internationally recognized program called LaunchCode where I honed my coding and problem solving skills. I can't wait to work with you.<br /><br />
+               <a href="">Download my CV</a></p>
+          </div>    
+          
+          
+        <div class="formContainer">
+             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+                <h2>Message Me</h2>
+                <input type="text" id="fname" name="fullname" placeholder="Name*" required>
+
+                <input type="email" id="email" name="email" placeholder="Email*" required>
+
+                <textarea id="message" name="message" placeholder="Message*" rows="5" cols="40" required></textarea>
+
+                <input type="submit" value="Send" onclick="alert('Message sent! Thank you!')">
+
+              </form>
+        </div>
+          
+           
+    
+   </div></div>
    
   
 <div class="flex-container">
-   <div class="box1"><div class="box-inner">Lorum Ipsum</div>
-   
-   </div>
-   <button type="button" class="slide-toggleR rightBtn">WORK</div>
+   <div class="boxLeft"><div class="box-inner">
+      
+          <h2>Content Management&nbsp;//<br />
+           Web&nbsp;Development Projects</h2>
+          <p>Check out my <a href="github.com/torikk">Github</a> and <a href="linkedin.com/torikk">LinkedIn</a></p>
+          
+      <div class="flex-grid">
+          <div class="grid-item">
+             <div class="overlay-container">
+              <img src="images/rawpixel-620238-unsplash.jpg" alt="projects" class="image">
+              <div class="overlay">
+                <div class="text">Hello World</div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">Mr Rogers</div>
+          <div class="grid-item">Financial site</div>
+          <div class="grid-item">This site or Blogs</div>
+          <div class="grid-item">8th Gen</div>
+          <div class="grid-item">Intel Core</div>
+          <div class="grid-item">Mobile pages?</div>
+      </div>
+      
+   </div></div>
+    <button type="button" class="slide-toggleR rightBtn">CONTACT ME</button></div>
     
     <div class="textPosition">
         <div class="header">
@@ -36,34 +92,61 @@
         </div>
     </div>
     
-    <div>
-        <button type="button" class="slide-toggleL leftBtn">CONTACT</div>
-    </div>
+   <div>
+        <button type="button" class="slide-toggleL leftBtn">MY PORTFOLIO</button></div>
+   </div>
 
 </div>
-        
-      <div class="box2"><div class="box-inner">Lorum Ipsum</div></div>
-</div>
 
+
+  <div class="contactSheet">
+              <!--ADD MAP-->
+              <div>
+                  <p>Tori Finch</p>
+                  <p><a href="mailto:torikklein@gmail.com">torikklein@gmail.com</a></p>
+                  <p>+49 0152 2244 9528</p>
+                  <p>Address</p>
+              </div>
+              <p></p>
+          </div>      
 
 <script>
-    
+
 $(document).ready(function(){
   $(".slide-toggleL").click(function(){
-    $(".box1").animate({
+      
+     $(".header").animate({
+      top: "-1000px"
+    }, 50);
+      
+       $(".rotator").animate({
+      top: "-1000px"
+    }, 50);
+     
+      
+     $(".boxLeft").animate({
       width: "toggle"
-    });
+    }, 50);
   });
 });
-</script> 
-<script>       
+     
 $(document).ready(function(){
   $(".slide-toggleR").click(function(){
-    $(".box2").animate({
+   
+       $(".header").animate({
+      top: "-1000px"
+    }, 50);
+      
+       $(".rotator").animate({
+      top: "-1000px"
+    }, 50);
+     
+     $(".boxRight").animate({
       width: "toggle"
-    });
+    }, 50);
   });
 });
+
     </script>
 <script src="script.js" type="text/javascript"></script>
  </body>

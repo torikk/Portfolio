@@ -1,8 +1,71 @@
 
+* {
+  box-sizing: border-box;
+}
+
 body, html {
     height: 100%;
-    border: 1px solid red;
+    background-color:#000;
+    font-family: helvetica;
 }
+
+h2 {
+    text-transform:uppercase;
+    color:orange;
+    font-weight:bolder; 
+    font-size: 20px;
+}
+
+
+.flex-grid {
+  display: flex;
+  flex-flow:column;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding:10px;
+  max-width:600px;
+  height:100%;
+  margin: 0 auto;
+}
+
+.grid-item {
+    background-color:orange;
+    height:150px;
+    min-width:150px;
+    width:31%;
+    margin:1%;
+    padding:10px;
+    display:block;
+    box-shadow: 5px 5px 5px rgba(13, 13, 13, 0.3);
+    border-radius: 2px;
+}
+
+.grid-item:nth-child(2) {
+    height:250px;
+}
+
+.grid-item:nth-child(3) {
+    height:190px;
+}
+
+.grid-item:nth-child(5) {
+    height:320px;
+}
+
+.grid-item:nth-child(7) {
+    height:220px;
+}
+
+@media (max-width: 400px) {
+    .grid-item:nth-child(5) {
+        height:120px!important;
+    }
+  }
 
 
 // This applies from 600px onwards
@@ -13,35 +76,42 @@ body, html {
 }
 
 .container {
-    background-image: url('../images/rawpixel-620238-unsplash.jpg');
-    background-color: #F9F1F1;
+    background-image: url('../images/fabian-grohs-1105864-unsplash.jpg');
+    background-color: #FFF;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display:fixed;
     height:100%;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-}
 
 button {
-    background-color: #000;
+    background-color: rgba(13, 13, 13, 0.8);
+    border: 1px solid orange;
+    border-radius: 2px;
     font-family:Arial;
-    color: #ffcc00;
+    font-size:14px;
+    color: orange;
     position: absolute;
     padding: 10px 20px;
-    top: 50%;    
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(13, 13, 13, 0.1);
+    transition: all ease;
+}
+
+button:hover {
+    transform: translateY(2px)
 }
 
 .slide-toggleL {
     left: 0;
+    top: 50%; 
 }
 
 .slide-toggleR {
     right: 0;
+    top: 50%; 
 }
 
 .textPosition {
@@ -51,16 +121,21 @@ button {
     height:100%;
 }
 
+/* MAIN TEXT */
+
 .header {
     width:450px;
     height:350px;
-    background-color:#ffcc00;
-    opacity: .8;
+    background-color:orange;
+    opacity: .95;
     position:absolute;
     top:100px;
     right:40%;
     box-sizing: border-box;
     padding: 20px 40px;
+    display: block;
+    box-shadow: 5px 5px 20px rgba(13, 13, 13, 0.2);
+    border-radius: 2px;
 }
 
 
@@ -84,14 +159,15 @@ button {
 
 .rotator {
     width: 500px;
-    height: 250px;
-    background-color: black;
-    opacity: .85;
+    height: 200px;
+    background-color: rgba(13, 13, 13, 0.9);
     position: absolute;
     top: 402px;
     right: 20%;
     box-sizing: border-box;
     padding: 20px 40px;
+    display:block;
+    
 }
 
 mark {
@@ -101,38 +177,199 @@ mark {
 
 .blurb {
     color:#fff;
-    font-size:17px;
+    font-size:15px;
     font-style: italic;
     padding:10px 0;
-    line-height: 22px;
+    line-height: 18px;
+    font-weight: lighter;
 }
 
 .author {
-    color:#fff;
-    font-size:16px;
+    color:orange;
+    font-size:12px;
     
 }
 
-.box1{
+/* GREY SIDE BOXES */
+
+
+.boxLeft {
     float:left;
     overflow: hidden;
-    background-color: rgba(13, 13, 13, 0.9);
+    background-color: rgba(13, 13, 13, 0.8);
     height:100%;
-    position:relative;
+    width:60%;
+    min-height:680px;
+    min-width:500px; 
+    position:absolute;
     left: 0;
     top: 0;
-    }
+    bottom: 0;
+    text-align: right;
+    display:none;
+}
 
-.box2 {
+.boxRight {
     float:right;
     overflow: hidden;
-    background-color: rgba(13, 13, 13, 0.9);
+    background-color: rgba(13, 13, 13, 0.8);
     height:100%;
-    }
-    /* Add padding and border to inner content
-    for better animation effect */
-    .box-inner{
-        width: 1200px;
-        padding: 10px;
-        border: 1px solid #a29415;
-    }
+    width:60%;
+    min-height:680px;
+    min-width:500px; 
+    position:absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: left;
+    display:none;
+}
+
+
+.box-inner {
+    height:90%;
+    width: 80%;
+    padding: 10px;
+    padding-left:10%;
+    color:#fff;
+    position:relative;
+    top:0;
+    bottom:10px;
+    left:0;
+    
+}
+
+.box-inner h1 { 
+    color:#FFCC00;
+    font-family: helvetica;
+    font-weight:200;
+    font-size:30px;
+    text-transform:uppercase;
+    padding:50px 0 0;
+}
+
+.box-inner p { 
+    color:#fff;
+    font-family: helvetica;
+    font-size:12px;
+    padding:5px 0 50px;
+}
+
+.box-inner a { 
+    color: orange;
+    font-family: helvetica;
+    font-size:13px;
+    text-transform:underline;
+}
+
+
+/* OVERLAY */
+.overlay-container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.flex-grid > .grid-item > .overlay-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* CONTACT SECTION */
+.bio {
+    width:80%;
+    margin:50px 0 0;
+}
+
+.bio img {
+    height: 100px;
+    width:100px;
+    border-radius: 50%;
+    float:left;
+    box-shadow: 5px 5px 5px rgba(13, 13, 13, 0.3);
+    padding: 0 10px 10px 0; 
+}
+
+.contactSheet {
+    width:100%;
+    height:40px;
+    background-color:#000;
+    opacity: 0.9;
+    color:#000;
+    position:fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    box-sizing: border-box;
+    padding:5px;
+    border-radius: 2px;
+}
+
+.contactSheet p {
+    color:#fff;
+    font-size:14px;
+    line-height:12px;
+    padding: 5px 20px;
+}
+
+.formContainer {
+    max-height:700px;
+    width:80%;
+    
+}
+
+input, textarea {
+    width:100%;
+    max-height:40px;
+    margin:5px 0;
+    background-color: transparent;
+    border: 1px solid orange;
+    color:orange;
+    padding:10px;
+}
+
+textarea {
+    min-height:120px;
+    max-height:250px;
+    resize: none;
+}
+
+input[type=submit] {
+    color:#000;
+    background-color:orange;
+    margin:auto;
+    padding:10px;
+}
+
+placeholder {
+    margin:0 10px; 
+}
